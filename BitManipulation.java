@@ -3,7 +3,8 @@ class BitManipulation {
     public boolean isPowerOfTwo (int x) {
         // 1) How to check if a given number is a power of 2 ?
         // x will check if x == 0 and !(x & (x - 1)) will check if x is a power of 2 or not
-        return (x && !(x & (x - 1)));
+        // return (x && !(x & (x - 1))) > 0 ? true : false;
+        return (x & (x - 1)) == 0 ? true : false;
     }
 
     public int countOne (int n) {
